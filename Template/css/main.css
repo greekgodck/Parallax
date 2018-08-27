@@ -257,6 +257,36 @@ footer{
   color: #fff;
 }
 
+  /* Preloader-Start */
+  #preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    /* change if the mask should have another color then white */
+    z-index: 999999999;
+    /* makes sure it stays on top */
+  }
+  
+  #status {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    /* centers the loading animation horizontally one the screen */
+    top: 50%;
+    /* centers the loading animation vertically one the screen */
+    background-image: url(../Bars.svg);
+    /* path to your loading animation */
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: -100px 0 0 -100px;
+    /* is width and height divided by two */
+  }
+  /* Preloader-Ended */
+
 /* PC-MEDIA VIEW--------------------------------------------------------------- */
 
 @media only screen and (min-width:1260px) {
@@ -312,6 +342,37 @@ footer{
   .sub0 li{
     float: left;
     padding: 1rem;
+  }
+  .sub1, .sub2{
+    display: none;
+  }
+  .sub1{
+    position: absolute;
+    width: 120px;
+    display: none;
+  }
+  .sub2{
+    position: absolute;
+    width: 100px;
+    display: none;
+    left: 90px;
+    top: 47px;
+  }
+  .sub1 li{
+    float: unset;
+    background-color:rgba(0,0,0,0.4);
+    margin-top: 5px;
+    padding: 8px;
+  }
+
+  .sub1 a, .sub2 a{
+    color: #fff;
+  }
+  .pcmenu li:nth-child(5):hover .sub1{
+    display: block;
+  }
+  .sub1 li:nth-child(2):hover .sub2{
+    display: block;
   }
   .pcmenu a:hover{
     color: #00aced;
@@ -462,37 +523,6 @@ footer{
   }
   .fa-linkedin:hover{
     color: #007bb6;
-  }
-  .sub1, .sub2{
-    display: none;
-  }
-  .sub1{
-    position: absolute;
-    width: 120px;
-    display: none;
-  }
-  .sub2{
-    position: absolute;
-    width: 100px;
-    display: none;
-    left: 90px;
-    top: 47px;
-  }
-  .sub1 li{
-    float: unset;
-    background-color:rgba(0,0,0,0.4);
-    margin-top: 5px;
-    padding: 8px;
-  }
-
-  .sub1 a, .sub2 a{
-    color: #fff;
-  }
-  .pcmenu li:nth-child(5):hover .sub1{
-    display: block;
-  }
-  .sub1 li:nth-child(2):hover .sub2{
-    display: block;
   }
 
   /* Preloader-Start */
